@@ -1031,7 +1031,6 @@ void SBAL(int port, char*dest){
 //--------------------------------------------------------//
 
 void RBAL(int port, char* dest, int nBAL){
-    printf("+++ Debug 1 \n");
 
     //Déclarations
     int sock;
@@ -1148,7 +1147,7 @@ int main (int argc, char **argv)
 	int lg =30;
 	int maxsize=9999;
 	
-	while ((c = getopt(argc, argv, "pn:sul:be:r:")) != -1) { //Ajout de l'ption 'u' dans le programme
+	while ((c = getopt(argc, argv, "pn:sul:be:r")) != -1) { //Ajout de l'ption 'u' dans le programme
 	
 		switch (c) {
 		
@@ -1269,10 +1268,10 @@ int main (int argc, char **argv)
     dest=argv[argc-2];
     
     
-/* 	if (source == -1) {
-		printf("usage: cmd [-p|-s][-n ##]++++\n");
+	if (source == -1) {
+		printf("usage: cmd [-p|-s][-n ##]\n");
 		exit(1) ;
-	} */
+	}
 
 //------------------------------------------------------//
 //-----UTilisation du service classique / Partie 1------//
